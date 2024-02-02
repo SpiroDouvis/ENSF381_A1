@@ -2,31 +2,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Add meta tags, title, and link to styles.css here -->
+    <!-- Define character set -->
+    <meta charset="UTF-8">
+
+    <!-- Define viewport for responsive web design -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Add description for the webpage -->
+    <meta name="description" content="This is a website where we sell many different computers.">
+
+    <!-- Add author of the webpage -->
+    <meta name="author" content="Spiro Douvis and Isabelle Gaudet">
+
+    <!-- Add title for the webpage -->
+    <title>ComputerZone</title>
+
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
     <header>
         <!-- Logo and website name go here -->
+        <img src="computerlogo.png" alt="Company Logo" width="100" height="100">
+        <h1>ComputerZone</h1>
     </header>
     <div>
         <!-- Navigation links go here -->
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="contact.html">Contact</a>
+            <a href="login.html">Login</a>
+        </nav>
     </div>
     <main>
-<!-- About Us Section -->
-        <section class="about-us">
-<!-- About Us contents go here -->
-        </section>
-        <section class="shop-now">
-    <!-- Shop Now Button (as a link to the Products page) -->
-        </section>
-    <!-- Customer Reviews/Testimonials Section -->
-        <section class="customer-reviews">
-    <!-- Add reviews as needed -->
-        </section>
+       <form>
+            <label for="username">Username:</label><br>
+            <input type="text" id="username" name="username"><br>
+            <label for="password">Password:</label><br>
+            <input type="password" id="password" name="password"><br>
+            <input type="submit" value="Login"><br>
+       </form> 
+       <p>New User?<a href="signup.html"> Click here</a> to get in the ZONE!</p>
     </main>
     <footer>
-    <!-- Copyright notice goes here -->
+        <!-- Copyright notice goes here -->
+        <p>&copy; 2024 ComputerZone. All rights reserved.</p>
     </footer>
 </body>
-    
 </html>
