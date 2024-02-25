@@ -31,8 +31,9 @@ footer {
 /* CSS FOR HOMEPAGE OR index.html */
 main .about-us {
     display: flex;
+    flex-direction: column; /*added for appearance*/
     justify-content: space-around;
-    align-items: center;
+    text-align: center;
     background-color: #ddd;
     padding: 20px;
     margin: 20px;
@@ -51,6 +52,7 @@ main .customer-reviews {
     background-color: #ddd;
     padding: 20px;
     margin: 20px;
+    flex-direction: column; /*added for appearance*/
 }
 
 /* CSS FOR LOGIN OR login.html*/
