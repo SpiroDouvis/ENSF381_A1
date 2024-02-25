@@ -1,0 +1,99 @@
+/* Header<head>, Navigation Bar<div>, Footer<footer>
+same for all pages*/
+header {
+    background-color: #333;
+    padding: 20px;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+div nav {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    background-color: #333;
+}
+
+div nav a {
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+  
+}
+
+footer {
+    background-color: #333;
+    padding: 10px;
+    margin: 0;
+    color: white;
+}
+/* CSS FOR HOMEPAGE OR index.html */
+main .about-us {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #ddd;
+    padding: 20px;
+    margin: 20px;
+}
+main button.shop-now {
+    background-color: #4CAF50;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 20px;
+}
+main .customer-reviews {
+    display: flex;
+    background-color: #ddd;
+    padding: 20px;
+    margin: 20px;
+}
+
+/* CSS FOR LOGIN OR login.html*/
+main form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ddd;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+form label {
+    display: block;
+    margin: 10px;
+}
+form input {
+    background-color: #fff;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    
+/* ADD PLACEHOLDER TEXT??*/
+}
+
+#loginButton {
+    background-color: #4CAF50;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px;
+    opacity: 0.5;
+}
+
+#loginButton:hover {
+    background-color: #45A049;
+    opacity: 1.0;
+}
+main p a {
+    color: #007BFF;
+    margin: 10px;
+}
+main p a:hover {
+    text-decoration: underline;
+}
+
+/* CSS FOR PRODUCTS OR products.html*/
+/* CSS FOR CONTACT OR contact.html*/
