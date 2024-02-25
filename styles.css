@@ -32,7 +32,6 @@ footer {
 main .about-us {
     display: flex;
     flex-direction: column; /*added for appearance*/
-    justify-content: space-around;
     text-align: center;
     background-color: #ddd;
     padding: 20px;
@@ -95,6 +94,7 @@ form input {
 main p a {
     color: #007BFF;
     margin: 10px;
+    text-decoration: none;
 }
 main p a:hover {
     text-decoration: underline;
