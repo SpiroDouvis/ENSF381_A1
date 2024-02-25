@@ -75,7 +75,7 @@ form input {
     margin: 10px;
     border-radius: 5px;
     
-/* ADD PLACEHOLDER TEXT??*/
+/* placeholder text is implemented in login.html*/
 }
 
 #loginButton {
