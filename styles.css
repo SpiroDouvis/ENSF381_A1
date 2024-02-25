@@ -37,11 +37,14 @@ main .about-us {
     padding: 20px;
     margin: 20px;
 }
-main button.shop-now {
+.shop-now-button {
     background-color: #4CAF50;
     padding: 10px;
     border-radius: 10px;
     margin: 20px;
+    color: white;
+    text-decoration: none;
+    display: inline-block;
 }
 main .customer-reviews {
     display: flex;
