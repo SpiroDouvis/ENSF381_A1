@@ -102,26 +102,23 @@ main p a:hover {
 
 /* CSS FOR PRODUCTS OR products.html*/
 
-/* 
-main {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+
+.product-list {
     background-color: #ddd;
     padding: 20px;
     margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
 }
+
 
 .product {
     background-color: #f9f9f9;
     padding: 20px;
     margin: 20px;
     border-radius: 10px;
-    width: calc(50% - 40px); 
-    box-sizing: border-box; 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 .product img {
@@ -130,14 +127,9 @@ main {
     margin-bottom: 10px;
 }
 
-.product p {
+.product .price {
     color: #007BFF;
     font-weight: bold;
-    margin-bottom: 5px;
-}
-
-.product:hover {
-    background-color: #ffffff;
 }
 
 .product button {
@@ -147,77 +139,26 @@ main {
     margin: 10px;
 }
 
-.product button:hover {
-    background-color: #45A049;
-} */
-
-
-.product-div {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    background-color: #ddd;
-    padding: 20px;
-    margin: 20px;
-}
-
-.product {
-    background-color: #f9f9f9;
-    padding: 20px;
-    margin: 20px;
-    border-radius: 10px;
-    width: calc(50% - 40px); 
-    box-sizing: border-box; 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.product img {
-    max-width: 100%;
-    border-radius: 8px;
-    margin-bottom: 10px;
-}
-
-.product p {
-    color: #007BFF;
-    font-weight: bold;
-    margin-bottom: 5px;
-}
-
 .product:hover {
     background-color: #ffffff;
 }
 
-.product button {
-    background-color: #4CAF50;
-    padding: 10px;
-    border-radius: 5px;
-    margin: 10px;
-}
-
 .product button:hover {
     background-color: #45A049;
 }
-
-
-
-
 
 /* CSS FOR CONTACT OR contact.html*/
 
- main .contact {
+.contact-info {
     display: flex;
     flex-direction: column;
     align-items: left;
-    justify-content: center; 
+    justify-content: left;
     background-color: #ddd;
     padding: 20px;
     margin: 20px;
     border-radius: 10px;
-    width: 100%;
 }
-
 
 .contact-method {
     background-color: #ddd;
@@ -226,6 +167,6 @@ main {
     border-radius: 10px;
 }
 
-.contact-method a:hover {
+.contact-method ul li a:hover {
     color: #007BFF;
 }
