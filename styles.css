@@ -140,6 +140,10 @@ main p a:hover {
     margin: 10px;
 }
 
+table {
+    width: 100%;
+}
+
 .product:hover {
     background-color: #ffffff;
 }
