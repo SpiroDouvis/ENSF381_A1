@@ -22,10 +22,10 @@ document.addEventListener('DOMContentLoaded', (event) => {
             const user = users.find(user => user.name === enteredUsername && user.email === enteredPassword);
 
             if(!user){
-                messageDisplay.textContent = 'Error, invalid username or password.';
+                messageDisplay.textContent = 'Invalid username or usermail. Please try again.';
             }
             else{
-                messageDisplay.textContent = `Welcome to the ZONE ${user.name}!`;
+                messageDisplay.textContent = `Login Successful. Welcome to the ZONE ${user.name}!`;
             }
         })
         .catch(() => {
