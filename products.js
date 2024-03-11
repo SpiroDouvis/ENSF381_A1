@@ -54,10 +54,8 @@ function removeFromCart(productName) {
     var product = cartSection.querySelector('#' + productName);
     var quantity = product.querySelector('#quantity');
     if (parseInt(quantity.textContent) > 1) {
-        // Decrease quantity
         quantity.textContent = parseInt(quantity.textContent) - 1;
     } else {
-        // Remove product from cart
         cartSection.removeChild(product);
     }
 }
