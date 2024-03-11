@@ -152,6 +152,17 @@ table {
     background-color: #45A049;
 }
 
+#removeButton {
+    background-color: #4CAF50;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+#removeButton:hover {
+    background-color: #ff0000;
+}
+
 /* CSS FOR CONTACT OR contact.html*/
 
 .contact-info {
@@ -174,4 +185,19 @@ table {
 
 .contact-method ul li a:hover {
     color: #007BFF;
+}
+
+/* CSS FOR SIGNUP OR signup.html */
+
+#signupButton {
+    background-color: #4CAF50;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px;
+    opacity: 0.5;
+}
+
+#signupButton:hover {
+    background-color: #45A049;
+    opacity: 1.0;
 }
