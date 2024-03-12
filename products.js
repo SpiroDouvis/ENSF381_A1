@@ -22,6 +22,8 @@ products.forEach(function(product) {
             };
             cartItems.push(cartItem);
         }
+        
+        alert(productName + " has been added to cart");
 
         renderCart();
     });
@@ -36,17 +38,17 @@ function renderCart() {
         var productDiv = document.createElement('div');
         productDiv.id = item.id;
 
-        var nameElement = document.createElement('p');
-        nameElement.textContent = item.name;
+        var nameElement = document.createElement('span');
+        nameElement.textContent = item.name + ' - ';
         productDiv.appendChild(nameElement);
 
-        var priceElement = document.createElement('p');
-        priceElement.textContent = item.price;
+        var priceElement = document.createElement('span');
+        priceElement.textContent = item.price + ' - ';
         productDiv.appendChild(priceElement);
 
-        var quantityElement = document.createElement('p');
+        var quantityElement = document.createElement('span');
         quantityElement.id = 'quantity';
-        quantityElement.textContent = item.quantity;
+        quantityElement.textContent = item.quantity + ' ';
         productDiv.appendChild(quantityElement);
 
         var removeButton = document.createElement('button');
