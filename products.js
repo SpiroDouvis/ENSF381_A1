@@ -1,61 +1,75 @@
+// products.js
 var products = document.querySelectorAll('.product');
+var cartItems = [];
 
 products.forEach(function(product) {
     var addButton = product.querySelector('button');
     addButton.addEventListener('click', function() {
-        addToCart(product);
+        var productName = product.querySelector('h2').textContent;
+        var productPrice = product.querySelector('.price').textContent;
+        var cartItem = cartItems.find(item => item.id === productName);
+
+        if (cartItem) {
+            // Increase quantity
+            cartItem.quantity += 1;
+        } else {
+            // Add new product to cart
+            cartItem = {
+                id: productName,
+                name: productName,
+                price: productPrice,
+                quantity: 1
+            };
+            cartItems.push(cartItem);
+        }
+
+        renderCart();
     });
 });
 
-function addToCart(product) {
+function renderCart() {
     var cartSection = document.getElementById('cartSection');
-    var productName = product.querySelector('h2').textContent;
-    var productPrice = product.querySelector('.price').textContent;
-    
-    // Check if product is already in cart
-    var existingProduct = cartSection.querySelector('#' + productName);
-    if (existingProduct) {
-        // Increase quantity
-        var quantity = existingProduct.querySelector('#quantity');
-        quantity.textContent = parseInt(quantity.textContent) + 1;
-    } 
-    else {
-        // Add new product to cart
+    // Clear the cart section
+    cartSection.innerHTML = '';
+
+    cartItems.forEach(function(item) {
         var productDiv = document.createElement('div');
-        productDiv.id = productName;
-        
+        productDiv.id = item.id;
+
         var nameElement = document.createElement('p');
-        nameElement.textContent = productName;
+        nameElement.textContent = item.name;
         productDiv.appendChild(nameElement);
-        
+
         var priceElement = document.createElement('p');
-        priceElement.textContent = productPrice;
+        priceElement.textContent = item.price;
         productDiv.appendChild(priceElement);
-        
+
         var quantityElement = document.createElement('p');
         quantityElement.id = 'quantity';
-        quantityElement.textContent = '1';
+        quantityElement.textContent = item.quantity;
         productDiv.appendChild(quantityElement);
-        
+
         var removeButton = document.createElement('button');
         removeButton.id = 'removeButton';
         removeButton.textContent = 'Remove';
         removeButton.addEventListener('click', function() {
-            removeFromCart(productName);
+            removeFromCart(item.id);
         });
         productDiv.appendChild(removeButton);
-        
+
         cartSection.appendChild(productDiv);
-    }
+    });
 }
 
-function removeFromCart(productName) {
-    var cartSection = document.getElementById('cartSection');
-    var product = cartSection.querySelector('#' + productName);
-    var quantity = product.querySelector('#quantity');
-    if (parseInt(quantity.textContent) > 1) {
-        quantity.textContent = parseInt(quantity.textContent) - 1;
+function removeFromCart(id) {
+    var cartItem = cartItems.find(item => item.id === id);
+    if (cartItem.quantity > 1) {
+        cartItem.quantity -= 1;
     } else {
-        cartSection.removeChild(product);
+        var index = cartItems.indexOf(cartItem);
+        cartItems.splice(index, 1);
     }
+
+    renderCart();
 }
+
