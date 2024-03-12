@@ -201,3 +201,10 @@ table {
     background-color: #45A049;
     opacity: 1.0;
 }
+
+#messageBox {
+    border: 2px solid;
+    background-color: #f9f9f9;
+    padding: 10px;
+    margin: 20px;
+}
